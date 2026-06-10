@@ -5,7 +5,7 @@
   "type": "module",
   "author": {
     "name": "NguyenHaiLy",
-    "github": "Keidev03"
+    "github": "nhlis"
   },
   "scripts": {
     "start:dev": "vite --host",
