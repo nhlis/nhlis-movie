@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 function Avatar({
     src,
-    fallbackSrc = 'https://image.knite.online/1t9q5nCG6BseSmM06d59wFl_Gekj6pGl_=s200',
+    fallbackSrc = 'https://image.nhlis.site/1t9q5nCG6BseSmM06d59wFl_Gekj6pGl_=s200',
     className,
     width = '20px',
     marginLeft = '0',

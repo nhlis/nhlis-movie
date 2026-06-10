@@ -2,7 +2,7 @@
 
 A responsive, full-featured anime and TV show streaming platform built with **React.js** and **NestJS**, supporting both registered users and guests. Features personalized viewing history, cross-device session sync, real-time updates, and multi-language UI.
 
-![Movie Streaming Preview](https://portfolio.knite.online/assets/bg_movie.webp)
+![Movie Streaming Preview](https://portfolio.nhlis.site/assets/bg_movie.webp)
 
 ---
 
@@ -96,7 +96,7 @@ bun run start:dev
 >
 > -   MongoDB
 > -   Redis
-> -   OAuth2 Auth Service (e.g. https://auth.knite.online)
+> -   OAuth2 Auth Service (e.g. https://auth.nhlis.site)
 >
 > These are required for full functionality (authentication, session management, etc.)
 
@@ -107,7 +107,7 @@ bun run start:dev
 Feel free to connect or reach out for collaboration:
 
 -   💼 [LinkedIn](https://www.linkedin.com/in/hải-lý-nguyễn-a0a5942a0)
--   🌐 Portfolio: [https://portfolio.knite.online](https://portfolio.knite.online)
+-   🌐 Portfolio: [https://portfolio.nhlis.site](https://portfolio.nhlis.site)
 -   📧 Email: nhly.dev@gmail.com
 
 ---
