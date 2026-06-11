@@ -3,6 +3,7 @@ import { IOverviewResponse } from '@/interfaces/overview.interface';
 import { OverviewService } from '@/services/overview.service';
 import { EMovieSort } from '@/enums';
 import { BookmarkService } from '@/services/bookmark.service';
+import useAuthStore from '@/stores/auth.store';
 
 interface OverviewQueryPayload {
     limit: number;
@@ -44,11 +45,13 @@ export const useSimulcastSesson = (start_date: Date, end_date: Date) =>
         end_date,
     });
 
-export const useBookmarks = (created_at: EMovieSort) =>
-    useOverviewInfinite(['overviews', 'bookmarks', 'infinite', created_at], ({ limit, cursor }) =>
+export const useBookmarks = (created_at: EMovieSort) => {
+    const { authuser } = useAuthStore();
+    return useOverviewInfinite(['overviews', 'bookmarks', 'infinite', authuser, created_at], ({ limit, cursor }) =>
         BookmarkService.getBookmarks({
             created_at,
             limit,
             last_id: cursor,
-        })
+        }),
     );
+};
