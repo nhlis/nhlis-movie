@@ -1,6 +1,7 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { HistoryService } from '@/services/history.service';
 import { IHistoryRespone } from '@/interfaces/history.interface';
+import useAuthStore from '@/stores/auth.store';
 
 interface OverviewQueryPayload {
     limit: number;
@@ -32,10 +33,12 @@ export const useHistoryInfinite = (queryKey: any[], callbackFn: OverviewQueryCal
     });
 };
 
-export const useHistories = () =>
-    useHistoryInfinite(['histories', 'infinite'], ({ limit, cursor }) =>
+export const useHistories = () => {
+    const { authuser } = useAuthStore();
+    return useHistoryInfinite(['histories', 'infinite', authuser], ({ limit, cursor }) =>
         HistoryService.getHistories({
             limit,
             last_id: cursor,
-        })
+        }),
     );
+};

@@ -43,8 +43,8 @@ const useAuthStore = create<AuthState & AuthAction>((set) => ({
     },
 }));
 
-// useAuthStore.subscribe((state) => {
-//     console.log('New store state:', state);
-// });
+useAuthStore.subscribe((state) => {
+    console.log('New store state:', state);
+});
 
 export default useAuthStore;
